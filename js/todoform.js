@@ -47,7 +47,7 @@ function printToDo(e){
     checkbox.addEventListener(`click`,check);
     function check(e){
         e.target.parentNode.classList.toggle(`check`);
-        checkCountFunction();
+        checkLiCountFunction();
     }
     
     button.addEventListener(`click`,removeLi);
