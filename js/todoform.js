@@ -58,12 +58,13 @@ function printToDo(e){
     }
 }
 
+// li node 갯수 찾기
 function liCountFunction(){
     const liCount = ul.querySelectorAll(`li`);
     const count = liCount.length;
     todo.innerHTML = `전체 할일 ${count}`;
 }
-    
+// li.check node 갯수 찾기  
 function checkLiCountFunction(){
     const checkCount = document.querySelectorAll(`li.check`);
     const checkCountNum = checkCount.length;
