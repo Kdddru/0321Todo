@@ -45,14 +45,14 @@ function printToDo(e){
     //완료한 할일 카운팅
     
     checkbox.addEventListener(`click`,check);
-    function check(){
-        event.target.parentNode.classList.toggle(`check`);
+    function check(e){
+        e.target.parentNode.classList.toggle(`check`);
         checkCountFunction();
     }
     
     button.addEventListener(`click`,removeLi);
-    function removeLi(){
-        event.target.parentNode.remove();
+    function removeLi(e){
+        e.target.parentNode.remove();
         liCountFunction();
         checkLiCountFunction();
     }
