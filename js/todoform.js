@@ -1,9 +1,9 @@
 const todoform = document.querySelector(`#todo-form`);
 const todotext = todoform.querySelector(`#todo-text`);  //text입력칸
 const todosubmit = todoform.querySelector(`todo-submit`); // submit
-const ul = document.querySelector(`#todolist`);
-const todo = document.querySelector(`#todo`);
-const endToDo = document.querySelector(`#end-todo`);
+const ul = document.querySelector(`#todolist`);  //값 출력하는곳
+const todo = document.querySelector(`#todo`); // li 출력하는곳 
+const endToDo = document.querySelector(`#end-todo`); // 체크박스li 갯수 출력하는곳
 
 
 
