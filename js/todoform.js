@@ -57,7 +57,9 @@ function printToDo(e){
     button.addEventListener(`click`,removeLi);
     function removeLi(){
         event.target.parentNode.remove();
-        todo.innerHTML = `전체 할일${count-1}`;
+        const liCount = ul.querySelectorAll(`li`);
+        const count = liCount.length;
+        todo.innerHTML = `전체 할일 ${count}`;
         const checkCount = document.querySelectorAll(`li.check`);
         const checkCou = checkCount.length;
         endToDo.innerHTML= ` / 완료한 할일 ${checkCou}`;
