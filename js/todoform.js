@@ -54,7 +54,7 @@ function printToDo(e){
     function removeLi(){
         event.target.parentNode.remove();
         liCountFunction();
-        checkCountFunction();
+        checkLiCountFunction();
     }
 }
 
@@ -64,7 +64,7 @@ function liCountFunction(){
     todo.innerHTML = `전체 할일 ${count}`;
 }
     
-function checkCountFunction(){
+function checkLiCountFunction(){
     const checkCount = document.querySelectorAll(`li.check`);
     const checkCountNum = checkCount.length;
     endToDo.innerHTML= ` / 완료한 할일 ${checkCountNum}`;
