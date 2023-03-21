@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 시계 -->
+    <div id="box">
+        <div id="clock"></div>
+        <!-- todo add -->
+        <form id="todo-form" action="">
+            <input id="todo-text" type="text"required>
+            <input id="todo-submit" type="submit" value="추가" required>
+        </form>
+        <!-- 할일, 완료한 일-->
+        <span id="todo"></span><span id="end-todo"></span>
+        <!-- todo form에서 받아온값 출력-->
+        <ul id="todolist">       
+        </ul>
+    </div>
+    <script src="js/clock.js"></script>
+    <script src="js/todoform.js"></script>
+</body> 
+</html>
