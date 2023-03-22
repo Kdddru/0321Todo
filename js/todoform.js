@@ -39,22 +39,22 @@ function printToDo(e){
     
     
     //카운팅
-    liCountFunction();
-    endToDo.innerHTML= ` / 완료한 할일 ${0}`;
+    todo.innerHTML = `전체 할일 ${liCountFunction()}`;
+    endToDo.innerHTML= ` / 완료한 할일 ${checkLiCountFunction()}`;
     
     //완료한 할일 카운팅
     
     checkbox.addEventListener(`click`,check);
     function check(e){
         e.target.parentNode.classList.toggle(`check`);
-        checkLiCountFunction();
+        endToDo.innerHTML = ` / 완료한 할일 ${checkLiCountFunction()}`;
     }
     
     button.addEventListener(`click`,removeLi);
     function removeLi(e){
         e.target.parentNode.remove();
-        liCountFunction();
-        checkLiCountFunction();
+        todo.innerHTML = `전체 할일 ${liCountFunction()}`;
+        endToDo.innerHTML= ` / 완료한 할일 ${checkLiCountFunction()}`;
     }
 }
 
@@ -63,13 +63,13 @@ function printToDo(e){
 function liCountFunction(){
     const liCount = ul.querySelectorAll(`li`);
     const count = liCount.length;
-    todo.innerHTML = `전체 할일 ${count}`;
+    return count;
 }
 // li.check node 갯수 찾기  
 function checkLiCountFunction(){
     const checkCount = document.querySelectorAll(`li.check`);
     const checkCountNum = checkCount.length;
-    endToDo.innerHTML= ` / 완료한 할일 ${checkCountNum}`;
+    return checkCountNum;
 }
 
 
