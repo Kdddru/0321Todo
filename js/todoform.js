@@ -58,6 +58,7 @@ function printToDo(e){
     }
 }
 
+
 // li node 갯수 찾기
 function liCountFunction(){
     const liCount = ul.querySelectorAll(`li`);
